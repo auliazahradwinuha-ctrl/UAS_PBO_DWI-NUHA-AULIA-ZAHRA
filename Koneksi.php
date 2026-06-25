@@ -4,7 +4,8 @@ class Koneksi {
     private $host = "localhost";
     private $username = "root";
     private $password = "";
-    private $database = "akademik"; // Sesuaikan dengan nama database di Tahap 1
+    // Sudah disesuaikan dengan nama database aslimu di phpMyAdmin
+    private $database = "db_uas_pbo_ti1d_dwinuhaauliazahra"; 
     protected $koneksi;
 
     public function __construct() {
