@@ -2,7 +2,6 @@
 
 abstract class Mahasiswa {
     // Properti/Atribut Terenkapsulasi (Protected)
-    // Dipetakan secara pas dari kolom tabel database Tahap 1
     protected $id_mahasiswa;
     protected $nama_mahasiswa;
     protected $nim;
