@@ -2,7 +2,7 @@
 require_once 'Mahasiswa.php';
 
 class MahasiswaPrestasi extends Mahasiswa {
-    // Properti Tambahan
+    // Properti Tambahan (Tahap 4)
     protected $nama_instansi_beasiswa;
     protected $minimal_ipk_syarat;
 
@@ -13,17 +13,17 @@ class MahasiswaPrestasi extends Mahasiswa {
         $this->minimal_ipk_syarat = $minimal_ipk_syarat;
     }
 
-    // Wajib Implementasi Metode Abstract dari Induk
+    // [TAHAP 5] Method Overriding - Logika Bisnis Prestasi
     public function hitungTagihanSemester() {
-        // Bisa diisi potongan harga, atau di-return penuh tergantung kebijakan beasiswa
-        return $this->tarif_ukt_nominal; 
+        // Diskon beasiswa 75%, sehingga hanya membayar 25% dari tarif asli
+        return $this->tarif_ukt_nominal * 0.25;
     }
 
     public function tampilkanSpesifikasiAkademik() {
         echo "Mahasiswa Prestasi - Instansi Beasiswa: " . $this->nama_instansi_beasiswa . ", Syarat Minimal IPK: " . $this->minimal_ipk_syarat;
     }
 
-    // 1 Method Khusus berisi Query (Select-Where)
+    // [TAHAP 4] Method khusus berisi Query (Select-Where)
     public function getQuerySelectSpecific() {
         return "SELECT id_mahasiswa, nama_mahasiswa, nim, semester, tarif_ukt_nominal, nama_instansi_beasiswa, minimal_ipk_syarat 
                 FROM tabel_mahasiswa 
