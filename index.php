@@ -16,7 +16,7 @@ $daftarBidikmisi = [];
 $daftarPrestasi  = [];
 
 // 4. Ambil semua data dari tabel_mahasiswa
-$query  = "SELECT * FROM tabel_mahasiswa";
+$query = "SELECT * FROM label_mahasiswa";
 $result = mysqli_query($koneksi, $query);
 
 while ($row = mysqli_fetch_assoc($result)) {
